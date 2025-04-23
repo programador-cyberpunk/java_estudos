@@ -19,7 +19,7 @@
 
      }
 
-        public Produtos(String fabricante, String nome, String modelo, String marca, int IdCategoria) {
+        public Produtos(String IdProduto ,String nome, String fabricante,String modelo, String marca, int IdCategoria) {
             this.setFabricante(fabricante);
             this.setNome(nome);
             this.setModelo(modelo);
@@ -28,7 +28,7 @@
         }
 
 
-        public Produtos(String fabricante, String nome, String modelo, String marca, int IdCategoria, String descricao, String unidadeMedida,int largura, int altura,float profundidade, int peso, String cor ) {
+        public Produtos(String IdProduto, String nome, String fabricante,String modelo, String marca, int IdCategoria, String descricao, String unidadeMedida,int largura, int altura,float profundidade, int peso, String cor ) {
             this.setFabricante(fabricante);
             this.setNome(nome);
             this.setModelo(modelo);

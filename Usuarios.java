@@ -4,7 +4,6 @@
             private int idUsuario;
             private String email;
             private String senha;
-            private int NivelUsuario;
             private String nome;
             private String cpf;
             private String endereco;
@@ -16,11 +15,6 @@
             private String foto;
             private String ativo;
 
-            private String tableName = "usuarios";
-            private String tableName = "usuarios";
-            private String tableName = "usuarios";
-            private String tableName = "usuarios";
-            private DBQuery dbQuery = new DBQuery();
 
             public Usuarios() {
 
@@ -52,7 +46,7 @@
             }
 
             ////////////////////////////
-            public int getIdUsuariio(){
+            public int getIdUsuariio(int IdUsuario){
                return idUsuario;
             }
             public void setIdUsuario(int idUsuario){
@@ -60,7 +54,7 @@
             }
             ////////////////////////////////
 
-            public String getEmail(){
+            public String getEmail(String email){
                 return email;
             }
             public  void setEmail(String email){
@@ -71,18 +65,17 @@
                 }
             }
             ////////////////////////////
-            public String getSenha(){
+            public String getSenha(String senha){
                 return senha;
             }
             public void setSenha(String senha){
                 this.senha = senha;
             }
             /////////////////////////////
-            public int getIdUsuario(int IdUsuario){
+            public int getNivelUsuario(int NivelUsuario){
                 return idUsuario;
             }
             public void setNivelUsuario(int NivelUsuario){
-                this.NivelUsuario = NivelUsuario;
             }
             //////////////////////////////
             public  String getNome(String Nome){

@@ -19,7 +19,7 @@ public class InstituicaoDAO {
             e.printStackTrace();
         }
     }
-    public int insert( Usuarios user) {
+    public int insert( Instituicao user) {
         int linesAfected = 0;
         if (linesAfected()>1){
             String cmd = "INSERT FROM lojinha.institucional";
@@ -29,7 +29,7 @@ public class InstituicaoDAO {
 
     }
 
-    public int update( Usuarios user) {
+    public int update( Instituicao user) {
         int linesAfected = 0;
         if (linesAfected()>0){
             String cmd = "UPDATE FROM lojinha.institucional";
@@ -39,7 +39,7 @@ public class InstituicaoDAO {
 
     }
 
-    public int delete( Usuarios user) {
+    public int delete( Instituicao user) {
         try {
             int linesAfected = 0;
             if(user.getNome()>0) {
@@ -55,7 +55,7 @@ public class InstituicaoDAO {
         }
     }
 
-    public ResultSet list(Usuarios where) {
+    public ResultSet list(Instituicao where) {
         String cmd = "SELECT nome, cpf_cnpj, tipoPessoa, endereco, bairro, cidade, cep, telefone, email, logo FROM lojinha.institucional ";
         if(! where.isEmpty() ){
             cmd += "WHERE" + where;
@@ -73,7 +73,7 @@ public class InstituicaoDAO {
 
 ////////////////cpf_cnpj//////////////////////////
 
-public int insert( Usuarios user) {
+public int insert( Instituicao user) {
     int linesAfected = 0;
     if(linesAfected()>0){
         String cmd = "INSERT INTO lojinha.institucional";
@@ -83,7 +83,7 @@ public int insert( Usuarios user) {
 
 }
 
-public int update( Usuarios user) {
+public int update( Instituicao user) {
     int linesAfected = 0;
     if (linesAfected()>1){
         String cmd = "UPDATE FROM lojinha.institucional";
@@ -93,7 +93,7 @@ public int update( Usuarios user) {
 
 }
 
-public int delete( Usuarios user) {
+public int delete( Instituicao user) {
     try {
         int linesAfected = 0;
         if(user.getCpf_cnpj()>0) {
@@ -109,7 +109,7 @@ public int delete( Usuarios user) {
     }
 }
 
-public ResultSet list( Usuarios where) {
+public ResultSet list( Instituicao where) {
     String cmd = "SELECT nome, cpf_cnpj, tipoPessoa, endereco, bairro, cidade, cep, telefone, email, logo FROM lojinha.institucional";
     if(! where.isEmpty() ){
         cmd += "WHERE" + where;
@@ -127,7 +127,7 @@ rs = dblink.executeQuery(cmd);
 
 /////////////////////////tipoPessoa//////////////////////
 
-public int insert( Usuarios user) {
+public int insert( Instituicao user) {
     int linesAfected = 0;
     if(linesAfected()>0){
         String cmd = "INSERT INTO lojinha.institucional";
@@ -139,7 +139,7 @@ public int insert( Usuarios user) {
     }
 }
 
-public int update( Usuarios user) {
+public int update( Instituicao user) {
     int linesAfected = 0;
     if (linesAfected()>1){
         String cmd = "UPDATE FROM lojinha.institucional";
@@ -149,7 +149,7 @@ public int update( Usuarios user) {
 
 }
 
-public int delete( Usuarios user) {
+public int delete( Instituicao user) {
     try {
         int linesAfected = 0;
         if(user.getTipoPessoa()>0) {
@@ -168,7 +168,7 @@ public int delete( Usuarios user) {
 /////////////////////////endereco//////////////////////////
 
 
-public int insert( Usuarios user) {
+public int insert( Instituicao user) {
     int linesAfected = 0;
     if(linesAfected()>0){
         String cmd = "INSERT INTO lojinha.institucional";
@@ -177,7 +177,7 @@ public int insert( Usuarios user) {
     }
 }
 
-public int update( Usuarios user) {
+public int update( Instituicao user) {
     int linesAfected = 0;
     if (linesAfected()>1){
         String cmd = "UPDATE FROM lojinha.institucional";
@@ -187,7 +187,7 @@ public int update( Usuarios user) {
 
 }
 
-public int delete( Usuarios user) {
+public int delete( Instituicao user) {
     try {
         int linesAfected = 0;
         if(user.getEndereco()>0) {
@@ -203,7 +203,7 @@ public int delete( Usuarios user) {
     }
 }
 
-public ResultSet list( Usuarios where) {
+public ResultSet list( Instituicao where) {
     String cmd = "SELECT  nome, cpf_cnpj, tipoPessoa, endereco, bairro, cidade, cep, telefone, email, logo FROM lojinha.institucional";
     if(! where.isEmpty() ){
         cmd += "WHERE" + where;
@@ -222,7 +222,7 @@ rs = dblink.executeQuery(cmd);
 ///////////////nome////////////////////
 
 
-public int insert( Usuarios user) {
+public int insert( Instituicao user) {
     int linesAfected = 0;
     if(linesAfected()>0){
         String cmd = "INSERT INTO lojinha.institucional";
@@ -231,7 +231,7 @@ public int insert( Usuarios user) {
     }
 }
 
-public int update( Usuarios user) {
+public int update( Instituicao user) {
     int linesAfected = 0;
     if (linesAfected()>1){
         String cmd = "UPDATE FROM lojinha.institucional";
@@ -241,7 +241,7 @@ public int update( Usuarios user) {
 
 }
 
-public int delete( Usuarios user) {
+public int delete( Instituicao user) {
     try {
         int linesAfected = 0;
         if(user.getBairro()>0) {
@@ -257,7 +257,7 @@ public int delete( Usuarios user) {
     }
 }
 
-public ResultSet list( Usuarios where) {
+public ResultSet list( Instituicao where) {
     String cmd = "SELECT  nome, cpf_cnpj, tipoPessoa, endereco, bairro, cidade, cep, telefone, email, logo FROM lojinha.institucional";
     if(! where.isEmpty() ){
         cmd += "WHERE" + where;
@@ -276,7 +276,7 @@ rs = dblink.executeQuery(cmd);
 ///////////////cep/////////////
 
 
-public int insert( Usuarios user) {
+public int insert( Instituicao user) {
     int linesAfected = 0;
     if(linesAfected()>0){
         String cmd = "INSERT INTO lojinha.institucional";
@@ -285,7 +285,7 @@ public int insert( Usuarios user) {
     }
 }
 
-public int update( Usuarios user) {
+public int update( Instituicao user) {
     int linesAfected = 0;
     if (linesAfected()>1){
         String cmd = "UPDATE FROM lojinha.institucional";
@@ -295,7 +295,7 @@ public int update( Usuarios user) {
 
 }
 
-public int delete( Usuarios user) {
+public int delete( Instituicao user) {
     try {
         int linesAfected = 0;
         if(user.getCep()>0) {
@@ -311,7 +311,7 @@ public int delete( Usuarios user) {
     }
 }
 
-public ResultSet list( Usuarios where) {
+public ResultSet list( Instituicao where) {
     String cmd = "SELECT nome, cpf_cnpj, tipoPessoa, endereco, bairro, cidade, cep, telefone, email, logo FROM lojinha.institucional";
     if(! where.isEmpty() ){
         cmd += "WHERE" + where;
@@ -330,7 +330,7 @@ rs = dblink.executeQuery(cmd);
 ////////////////telefone/////////////////////
 
 
-public int insert( Usuarios user) {
+public int insert( Instituicao user) {
     int linesAfected = 0;
     if(linesAfected()>0){
         String cmd = "INSERT INTO lojinha.institucional";
@@ -339,7 +339,7 @@ public int insert( Usuarios user) {
     }
 }
 
-public int update( Usuarios user) {
+public int update( Instituicao user) {
     int linesAfected = 0;
     if (linesAfected()>1){
         String cmd = "UPDATE FROM lojinha.institucional";
@@ -349,7 +349,7 @@ public int update( Usuarios user) {
 
 }
 
-public int delete( Usuarios user) {
+public int delete( Instituicao user) {
     try {
         int linesAfected = 0;
         if(user.getTelefone()>0) {
@@ -365,7 +365,7 @@ public int delete( Usuarios user) {
     }
 }
 
-public ResultSet list( Usuarios where) {
+public ResultSet list( Instituicao where) {
     String cmd = "SELECT nome, cpf_cnpj, tipoPessoa, endereco, bairro, cidade, cep, telefone, email, logo FROM lojinha.institucional";
     if(! where.isEmpty() ){
         cmd += "WHERE" + where;
@@ -383,7 +383,7 @@ rs = dblink.executeQuery(cmd);
 ////////////email/////////////
 
 
-public int insert( Usuarios user) {
+public int insert( Instituicao user) {
     int linesAfected = 0;
     if(linesAfected()>0){
         String cmd = "INSERT INTO lojinha.institucional";
@@ -397,7 +397,7 @@ public int insert( Usuarios user) {
     }
 }
 
-public int update( Usuarios user) {
+public int update( Instituicao user) {
     int linesAfected = 0;
     if (linesAfected()>1){
         String cmd = "UPDATE FROM lojinha.institucional";
@@ -407,7 +407,7 @@ public int update( Usuarios user) {
 
 }
 
-public int delete( Usuarios user) {
+public int delete( Instituicao user) {
     try {
         int linesAfected = 0;
         if(user.getEmail()>0) {
@@ -423,7 +423,7 @@ public int delete( Usuarios user) {
     }
 }
 
-public ResultSet list( Usuarios where) {
+public ResultSet list( Instituicao where) {
     String cmd = "SELECT nome, cpf_cnpj, tipoPessoa, endereco, bairro, cidade, cep, telefone, email, logo FROM lojinha.institucional";
     if(! where.isEmpty() ){
         cmd += "WHERE" + where;
@@ -440,7 +440,7 @@ rs = dblink.executeQuery(cmd);
 	}
 
 /////////////////////logo///////////////
-public int insert( Usuarios user) {
+public int insert( Instituicao user) {
     int linesAfected = 0;
     if(linesAfected()>0){
         String cmd = "INSERT INTO lojinha.institucional";
@@ -449,7 +449,7 @@ public int insert( Usuarios user) {
     }
 }
 
-public int update( Usuarios user) {
+public int update( Instituicao user) {
     int linesAfected = 0;
     if (linesAfected()>1){
         String cmd = "UPDATE FROM lojinha.institucional";
@@ -459,7 +459,7 @@ public int update( Usuarios user) {
 
 }
 
-public int delete( Usuarios user) {
+public int delete( Instituicao user) {
     try {
         int linesAfected = 0;
         if(user.getLogo()>0) {
@@ -475,7 +475,7 @@ public int delete( Usuarios user) {
     }
 }
 
-public ResultSet list( Usuarios where) {
+public ResultSet list( Instituicao where) {
     String cmd = "SELECT nome, cpf_cnpj, tipoPessoa, endereco, bairro, cidade, cep, telefone, email, logo FROM lojinha.institucional";
     if(! where.isEmpty() ){
         cmd += "WHERE" + where;

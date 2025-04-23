@@ -46,7 +46,7 @@
                  String entregaBairro,String entregaEndereco, String entregaNumero, String entregaCompl,
                  String entregaCidade, String entregaUF, String entregaCEP, String entregaTelefone,
                  String entregaRefer, String valorTotal, String qtdItems, String dtDevolucao, String motivoDevolucao){
-            
+
             this.setIdPedido(idPedido);
             this.setIdUsuario(idUsuario);
             this.setDtPedido(dtPedido);
