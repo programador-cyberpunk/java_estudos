@@ -39,13 +39,15 @@ CREATE TABLE Instrumentos(
  knobs INT NOT NULL,  -- ?
  captadores INT NOT NULL, -- tbm nao sei pq coloquei essa merda
  drive VARCHAR (2), -- aqui vc poe se vai usar ou nao,entao usa o S ou N
- chave_seletora VARCHAR (5) NOT NULL);
+ chave_seletora VARCHAR (5) NOT NULL,
+  FOREIGN KEY (id) REFERENCES Usuarios(id));
  
  
  CREATE TABLE violao(
  qtd_cordas INT NOT NULL,
  cordas_nome VARCHAR(20) NOT NULL, 
- tom VARCHAR(2) NOT NULL);
+ tom VARCHAR(2) NOT NULL,
+ FOREIGN KEY (id) REFERENCES Usuarios(id));
  
  CREATE TABLE baixo(
  qtd_cordas INT NOT NULL,
@@ -53,43 +55,61 @@ CREATE TABLE Instrumentos(
  tom VARCHAR(2) NOT NULL,
  knobs INT NOT NULL,  -- ?
  captadores INT NOT NULL, -- tbm e importante saber
- drive VARCHAR (2)); -- tem louco pra tudo nessa porra desse mundo
+ drive VARCHAR (2),
+FOREIGN KEY (id) REFERENCES Usuarios(id)); -- tem louco pra tudo nessa porra desse mundo
  
   CREATE TABLE banjo(
  qtd_cordas INT NOT NULL,
  cordas_nome VARCHAR(20) NOT NULL, 
- tom VARCHAR(2) NOT NULL);
+ tom VARCHAR(2) NOT NULL,
+  FOREIGN KEY (id) REFERENCES Usuarios(id));
  
   CREATE TABLE bateria(
  qtd_pratos INT NOT NULL,
  partes VARCHAR(20) NOT NULL, 
- tom VARCHAR(2) NOT NULL);
+ tom VARCHAR(2) NOT NULL,
+FOREIGN KEY (id) REFERENCES Usuarios(id));
  
   CREATE TABLE viola(
  qtd_cordas INT NOT NULL,
  cordas_nome VARCHAR(20) NOT NULL, 
- tom VARCHAR(2) NOT NULL);
+ tom VARCHAR(2) NOT NULL,
+ FOREIGN KEY (id) REFERENCES Usuarios(id));
  
   CREATE TABLE teclado(
  qtd_teclas INT NOT NULL,
  qtd_oitavas VARCHAR(20) NOT NULL, 
- tom VARCHAR(2) NOT NULL);
+ tom VARCHAR(2) NOT NULL,
+ FOREIGN KEY (id) REFERENCES Usuarios(id));
  
   CREATE TABLE piano(
  qtd_teclas INT NOT NULL,
  qtd_oitavas VARCHAR(20) NOT NULL, 
- tom VARCHAR(2) NOT NULL);
+ tom VARCHAR(2) NOT NULL,
+  FOREIGN KEY (id) REFERENCES Usuarios(id));
  
   CREATE TABLE orgao(
  qtd_teclas INT NOT NULL,
  qtd_oitavas VARCHAR(20) NOT NULL, 
- tom VARCHAR(2) NOT NULL);
+ tom VARCHAR(2) NOT NULL,
+  FOREIGN KEY (id) REFERENCES Usuarios(id));
  
   CREATE TABLE pedal(
  tipo VARCHAR(200) NOT NULL,
  nome VARCHAR(20) NOT NULL, 
  efeitos VARCHAR(30) NOT NULL,
- knobs VARCHAR(2) NOT NULL);
+ knobs VARCHAR(2) NOT NULL,
+ FOREIGN KEY (id) REFERENCES Usuarios(id),
+ FOREIGN KEY (guitarra) REFERENCES Instrumentos(guitarra),
+ FOREIGN KEY (baixo) REFERENCES Instrumentos(baixo));
+ 
+  CREATE TABLE bateria(
+ tom VARCHAR(2) NOT NULL,
+ qtd_pratos int(20) NOT NULL,
+ qtd_pedal int(20) NOT NULL,
+ partes VARCHAR(30) NOT NULL,
+  FOREIGN KEY (id) REFERENCES Usuarios(id));
+ 
  
  
  
