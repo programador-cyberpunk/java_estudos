@@ -1,0 +1,19 @@
+
+	@startuml
+	left to right direction
+	actor Guest as gt
+	
+	package Usuario {
+	  actor Usuario as U
+	  actor "Guitarrista " as gt
+	}
+	package Gravador {
+	  usecase "Fazer Login" as FL
+	  usecase "Inicia gravacao" as IG
+	  usecase "Gravar" as G
+	  usecase "Encerrar gravacao" asEG
+	}
+	gt --> FL
+	gt --> IG
+	gt --> G
+	@enduml
