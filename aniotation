@@ -1,0 +1,16 @@
+pra criar um requisito nao funcional,tem que criar um nao funcional primeiro
+pq ele vai fazer parte do sistema,e te auxilia a nao fazer merda
+
+
+diagrama de gantt
+uma ferramente visual pra controlar o cronograma de projetos e avaliar
+ os prazos de entregas e recursos essenciais
+ pra te exibir as parada, o que o programa faz é exibir um painel com
+ tudo o que precisa ser realizado,a relação de presedencia entre as
+ tarefas, quais foram inciadas,a prioridades delas e a previsão
+ de termino dessas porra. Ai fica mais facil fazer os jegue se 
+ mexer pra acabar esse caralho de uma vez e focar em outras coisas.
+ 
+ pra mexer com produção,da pra usar o grafico pra acompanhar o
+ andar da carruagem das ordens,especificamente nas industrias com
+ produção sob encomenda e com nivels de lista de materiais dos produtos,que obedece a ordem de pais e filhas
