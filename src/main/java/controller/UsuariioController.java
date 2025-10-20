@@ -10,7 +10,8 @@ import dto.UsuarioDTO;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
+import com.google.gson.Gson;
+import java.io.PrintWriter;
 
 @WebServlet("/usuarios")
 public class UsuariioController extends HttpServlet{
@@ -48,6 +49,22 @@ public class UsuariioController extends HttpServlet{
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException{
+	  String username = request.getParameter("username");
+	  
+	  UsuarioDTO usuarioEncontrado = bancoDeDados(username);
+	   if(usuarioEncontrado !=null) {
+		   usuarioEncontrado.setSenha(null);
+		Gson gson = new Gson();
+		String usuarioJson = gson.toJson(usuarioEncontrado);
+		response.setContentType("application/jsonn");
+		response.setCharacterEncoding("UTF-8");
+		
+		//essa porra agora escreve o Json na resposta
+		PrintWriter out = response.getWriter();
+		out.print(usuarioJson);
+		out.flush(); //que porra e flush??
+		
+		}
 	  
 	  System.out.println("Recebi essa porra de requisição GET no meu controller, do usuario");
   }
