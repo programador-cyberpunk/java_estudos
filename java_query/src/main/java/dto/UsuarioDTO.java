@@ -1,5 +1,7 @@
 package dto;
 
+import dto.UsuarioDTO;
+
 public class UsuarioDTO {
 	private String username;
 	private String email;
@@ -30,6 +32,5 @@ public String getSenha() {
 public void setSenha(String senha) {
 	 this.senha = senha;
 }
-
 
 }
