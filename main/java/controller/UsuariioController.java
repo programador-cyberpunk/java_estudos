@@ -35,7 +35,7 @@ import java.io.PrintWriter;
 			UsuarioDTO novoUsuario = gson.fromJson(jsonPayload, UsuarioDTO.class);
 			
 			 if(novoUsuario == null || novoUsuario.getUsername() == null){
-				 response.setStatus(HttpServketResponse.SC_BAD_REQUEST);
+				 response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 				response.getWriter().write("Dados invalidos nessa porra, corrige ai");
 				return;
 			 }
